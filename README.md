@@ -2,7 +2,7 @@
 
 The assignment is a Java Maven project with BDD framework. It has a feature file consisting of 2 scenarios that implement the tasks as stated in 'Income QA Tasks.docx'.
 
-To Run the assignment, follow the step below:
+To Run the assignment, please follow the steps below:
 1. Import the Maven project to e.g. Eclipse IDE
 
 2. Open a Command Prompt and navigate to the Project directory
