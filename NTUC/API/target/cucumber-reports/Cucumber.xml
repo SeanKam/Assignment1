@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<testsuite failures="0" name="cucumber.runtime.formatter.JUnitFormatter" skipped="0" tests="2" time="16.610569">
+<testcase classname="NTUC Income QA Tasks" name="Get and Print User information from GitHub" time="4.869887">
+<system-out><![CDATA[Given initialize API environment............................................passed
+Given I specify the username of a GitHub User in CLI........................passed
+When I Send GET request to get this user information........................passed
+Then Above information of the user is printout..............................passed
+When I Send GET request to get this user Repositories.......................passed
+Then Above information of each repository belonging to user is printout.....passed
+]]></system-out>
+</testcase>
+<testcase classname="NTUC Income QA Tasks" name="Verify stars value of a specific repository belonging to user in Task1" time="11.740682">
+<system-out><![CDATA[Given I navigate to GitHub main page........................................passed
+When I search for the same user and navigate to his Repositories page.......passed
+And I navigate to the Repository that is returned FIRST in the list in TASK 1.passed
+Then I verify the star count shown in webpage is equal to value returned by the API.passed
+]]></system-out>
+</testcase>
+</testsuite>

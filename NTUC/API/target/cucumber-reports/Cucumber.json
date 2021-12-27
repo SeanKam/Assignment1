@@ -1,0 +1,252 @@
+[
+  {
+    "line": 2,
+    "elements": [
+      {
+        "start_timestamp": "2021-12-27T15:52:53.063Z",
+        "before": [
+          {
+            "result": {
+              "duration": 184224300,
+              "status": "passed"
+            },
+            "match": {
+              "location": "Automation.before()"
+            }
+          }
+        ],
+        "line": 5,
+        "name": "Get and Print User information from GitHub",
+        "description": "",
+        "id": "ntuc-income-qa-tasks;get-and-print-user-information-from-github",
+        "after": [
+          {
+            "result": {
+              "duration": 4182900,
+              "status": "passed"
+            },
+            "match": {
+              "location": "Automation.cleanUp()"
+            }
+          }
+        ],
+        "type": "scenario",
+        "keyword": "Scenario",
+        "steps": [
+          {
+            "result": {
+              "duration": 292683900,
+              "status": "passed"
+            },
+            "line": 6,
+            "name": "initialize API environment",
+            "match": {
+              "location": "Automation.setupAPIEnvironment()"
+            },
+            "keyword": "Given "
+          },
+          {
+            "result": {
+              "duration": 75825700,
+              "status": "passed"
+            },
+            "line": 7,
+            "name": "I specify the username of a GitHub User in CLI",
+            "match": {
+              "location": "Automation.getUserFromGitHub()"
+            },
+            "keyword": "Given "
+          },
+          {
+            "result": {
+              "duration": 925468000,
+              "status": "passed"
+            },
+            "line": 8,
+            "name": "I Send GET request to get this user information",
+            "match": {
+              "location": "Automation.getGitHubUser()"
+            },
+            "keyword": "When "
+          },
+          {
+            "result": {
+              "duration": 318405300,
+              "status": "passed"
+            },
+            "line": 9,
+            "name": "Above information of the user is printout",
+            "match": {
+              "location": "Automation.printUserInfo(DataTable)"
+            },
+            "rows": [
+              {
+                "cells": [
+                  "gitHub_Username",
+                  "login"
+                ]
+              },
+              {
+                "cells": [
+                  "gitHub_name",
+                  "name"
+                ]
+              },
+              {
+                "cells": [
+                  "gitHub_AccountCreatedOn",
+                  "created_at"
+                ]
+              }
+            ],
+            "keyword": "Then "
+          },
+          {
+            "result": {
+              "duration": 410209900,
+              "status": "passed"
+            },
+            "line": 13,
+            "name": "I Send GET request to get this user Repositories",
+            "match": {
+              "location": "Automation.getGitHubUserAllRepo()"
+            },
+            "keyword": "When "
+          },
+          {
+            "result": {
+              "duration": 2540166200,
+              "status": "passed"
+            },
+            "line": 14,
+            "name": "Above information of each repository belonging to user is printout",
+            "match": {
+              "location": "Automation.getGitHubUserRepoRequest()"
+            },
+            "keyword": "Then "
+          }
+        ],
+        "tags": [
+          {
+            "name": "@NTUC_Assignment"
+          },
+          {
+            "name": "@Task1"
+          }
+        ]
+      },
+      {
+        "start_timestamp": "2021-12-27T15:52:57.934Z",
+        "before": [
+          {
+            "result": {
+              "duration": 233500,
+              "status": "passed"
+            },
+            "match": {
+              "location": "Automation.before()"
+            }
+          }
+        ],
+        "line": 17,
+        "name": "Verify stars value of a specific repository belonging to user in Task1",
+        "description": "",
+        "id": "ntuc-income-qa-tasks;verify-stars-value-of-a-specific-repository-belonging-to-user-in-task1",
+        "after": [
+          {
+            "result": {
+              "duration": 606484400,
+              "status": "passed"
+            },
+            "match": {
+              "location": "Automation.cleanUp()"
+            }
+          }
+        ],
+        "type": "scenario",
+        "keyword": "Scenario",
+        "steps": [
+          {
+            "result": {
+              "duration": 2982597400,
+              "status": "passed"
+            },
+            "line": 18,
+            "name": "I navigate to GitHub main page",
+            "match": {
+              "location": "Automation.navigateToGitHubPage(DataTable)"
+            },
+            "rows": [
+              {
+                "cells": [
+                  "webURL",
+                  "http://github.com/"
+                ]
+              }
+            ],
+            "keyword": "Given "
+          },
+          {
+            "result": {
+              "duration": 4186901900,
+              "status": "passed"
+            },
+            "line": 20,
+            "name": "I search for the same user and navigate to his Repositories page",
+            "match": {
+              "location": "Automation.navigateToUserRepositoriesPage()"
+            },
+            "keyword": "When "
+          },
+          {
+            "result": {
+              "duration": 3896919900,
+              "status": "passed"
+            },
+            "line": 21,
+            "name": "I navigate to the Repository that is returned FIRST in the list in TASK 1",
+            "match": {
+              "location": "Automation.clickRepository()"
+            },
+            "keyword": "And "
+          },
+          {
+            "result": {
+              "duration": 56736200,
+              "status": "passed"
+            },
+            "line": 22,
+            "name": "I verify the star count shown in webpage is equal to value returned by the API",
+            "match": {
+              "location": "Automation.verifyStarCountValue()"
+            },
+            "keyword": "Then "
+          }
+        ],
+        "tags": [
+          {
+            "name": "@NTUC_Assignment"
+          },
+          {
+            "name": "@Task2"
+          }
+        ]
+      }
+    ],
+    "name": "NTUC Income QA Tasks",
+    "description": "",
+    "id": "ntuc-income-qa-tasks",
+    "keyword": "Feature",
+    "uri": "file:src/test/java/features/NTUCAssignment.feature",
+    "tags": [
+      {
+        "name": "@NTUC_Assignment",
+        "type": "Tag",
+        "location": {
+          "line": 1,
+          "column": 1
+        }
+      }
+    ]
+  }
+]
